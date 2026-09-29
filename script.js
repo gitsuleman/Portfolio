@@ -44,6 +44,10 @@ document.querySelectorAll(".navbar a").forEach(link => {
    TYPING ANIMATION
 ========================= */
 
+const typingElement = document.querySelector(".typing");
+
+if (typingElement && typeof Typed !== "undefined") {
+
 new Typed(".typing", {
 
     strings: [
@@ -64,9 +68,13 @@ new Typed(".typing", {
 
 });
 
+}
+
 /* =========================
    AOS INITIALIZATION
 ========================= */
+
+if (typeof AOS !== "undefined") {
 
 AOS.init({
 
@@ -77,6 +85,8 @@ AOS.init({
     offset: 100
 
 });
+
+}
 
 /* =========================
    ACHIEVEMENT COUNTERS
@@ -212,6 +222,8 @@ window.addEventListener("scroll", () => {
    PARTICLES JS
 ========================= */
 
+if (typeof particlesJS !== "undefined") {
+
 particlesJS("particles-js", {
 
     particles: {
@@ -284,6 +296,8 @@ particlesJS("particles-js", {
 
 });
 
+}
+
 /* =========================
    SMOOTH REVEAL EFFECT
 ========================= */
@@ -331,12 +345,15 @@ if (contactForm) {
 
         e.preventDefault();
 
-        alert(
-            "Thank you for contacting me! I will get back to you soon."
-        );
+        const formData = new FormData(contactForm);
+        const name = String(formData.get("name") || "").trim();
+        const email = String(formData.get("email") || "").trim();
+        const message = String(formData.get("message") || "").trim();
 
-        contactForm.reset();
+        const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
+        window.location.href = `mailto:er.suleman.khan@gmail.com?subject=${subject}&body=${body}`;
     });
 
 }
@@ -357,25 +374,3 @@ if (copyright) {
 
 }
 
-/* =========================
-   PRELOADER SUPPORT
-========================= */
-
-window.addEventListener("load", () => {
-
-    document.body.classList.add("loaded");
-
-});
-
-/* =========================
-   CONSOLE SIGNATURE
-========================= */
-
-console.log(
-`
-===================================
-  Suleman Khan Portfolio
-  AI & Software Developer
-===================================
-`
-);

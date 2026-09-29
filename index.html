@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sulaiman Warsi | AI & Software Developer</title>
+    <meta name="description" content="Sulaiman Warsi — AI and Software Developer portfolio showcasing projects, technical skills, certifications, and experience.">
+    <meta name="theme-color" content="#050816">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -14,7 +16,8 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,7 +28,9 @@
 
     <header class="header">
 
-        <a href="#" class="logo"> </a>
+        <a href="#home" class="logo" aria-label="Suleman Warsi - Home">
+            <img src="assets/logo.png" alt="Suleman Warsi logo">
+        </a>
 
         <nav class="navbar">
 
@@ -82,21 +87,18 @@
 
             <div class="social-icons">
 
-                <a href="https://github.com/gitsuleman" target="_blank">
+                <a href="https://github.com/gitsuleman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/sulaiman-warsi-00279b407" target="_blank">
+                <a href="https://www.linkedin.com/in/sulaiman-warsi-00279b407" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
 
-                <a href="mailto:er.suleman.khan@gmail.com" target="_blank">
+                <a href="mailto:er.suleman.khan@gmail.com" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
 
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
 
             </div>
 
@@ -128,7 +130,7 @@
 
                     My experience spans web development, Python programming, and AI-based applications. I am currently expanding my expertise in Machine Learning, Large Language Models (LLMs), and software engineering while actively building projects that address real-world challenges.
 
-                    am seeking opportunities to contribute, learn, and grow as an AI and Software Development professional.
+                    I am seeking opportunities to contribute, learn, and grow as an AI and Software Development professional.
                 </p>
 
             </div>
@@ -245,7 +247,7 @@
 
             <div class="project-card">
 
-                <img src="images/project1.jpg" alt="">
+                <img src="assets/project1.png" alt="Portfolio website preview" loading="lazy">
 
                 <h3>Portfolio Website</h3>
 
@@ -259,15 +261,15 @@
                 </div>
 
                 <div class="project-buttons">
-                    <a href="https://github.com/gitsuleman/Portfolio.git" target="_blank" class="btn">GitHub</a>
-                    <a href="#" target="_blank" class="btn">Live Demo</a>
+                    <a href="https://github.com/gitsuleman/Portfolio" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                    <a href="https://gitsuleman.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                 </div>
 
             </div>
 
             <div class="project-card">
 
-                <img src="images/project2.jpg" alt="">
+                <div class="project-placeholder" aria-label="SpamShield AI project preview">SpamShield AI</div>
 
                 <h3>Spam Detection System</h3>
 
@@ -281,8 +283,8 @@
                 </div>
 
                 <div class="project-buttons">
-                    <a href="https://github.com/gitsuleman/SpamShield-AI.git" target="_blank" class="btn">GitHub</a>
-                    <a href="https://spamshield-aii.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+                    <a href="https://github.com/gitsuleman/SpamShield-AI.git" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                    <a href="https://spamshield-aii.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                 </div>
 
             </div>
@@ -305,7 +307,7 @@
     <img src="assets/cert11.PNG" alt="">
     <h3>AI Internship</h3>
 
-    <a href="assets/cert11.PNG" target="_blank">
+    <a href="assets/cert11.PNG" target="_blank" rel="noopener noreferrer">
         View Certificate
     </a>
 </div>
@@ -314,7 +316,7 @@
     <img src="assets/cert2.jpg" alt="">
     <h3>DSA Certificate</h3>
 
-    <a href="assets/cert2.jpg" target="_blank">
+    <a href="assets/cert2.jpg" target="_blank" rel="noopener noreferrer">
         View Certificate
     </a>
 </div>
@@ -399,7 +401,7 @@
             <h3>Repositories</h3>
             <span>10+</span>
 
-            <a href="https://github.com/gitsuleman" target="_blank" class="btn">
+            <a href="https://github.com/gitsuleman" target="_blank" rel="noopener noreferrer" class="btn">
                 Visit GitHub Profile
             </a>
 
@@ -415,22 +417,30 @@
             <h2>Contact Me</h2>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
 
             <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
+                autocomplete="name"
+                aria-label="Your Name"
                 required>
 
             <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
+                autocomplete="email"
+                aria-label="Your Email"
                 required>
 
             <textarea
+                name="message"
                 placeholder="Your Message"
-                rows="6">
-            </textarea>
+                rows="6"
+                aria-label="Your Message"
+                required></textarea>
 
             <button type="submit">
                 Send Message
@@ -452,15 +462,15 @@
 
         <div class="footer-socials">
 
-            <a href="https://github.com/gitsuleman" target="_blank">
+            <a href="https://github.com/gitsuleman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/sulaiman-warsi-00279b407" target="_blank">
+            <a href="https://www.linkedin.com/in/sulaiman-warsi-00279b407" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
 
-            <a href="mailto:er.suleman.khan@gmail.com" target="_blank">
+            <a href="mailto:er.suleman.khan@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
 
@@ -476,7 +486,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <!-- Particles -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
